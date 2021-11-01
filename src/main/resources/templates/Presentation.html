@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Customer Phone Exercise</title>
+
+</head>
+<body>
+<div class="container">
+
+	<br></br>
+              <h3>Listing Customer Phone Number</h3>
+              <hr>
+              <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>id</th>
+                            <th>Reservation_Date</th>
+                            <th>Patient</th>
+                            <th>cancelation_reason</th>
+
+                        </tr>
+                    </thead>                       
+                             <tbody>
+                                           <tr th:each="temp : ${FinalEnity}">
+                                                          <td th:text="${temp.id}" />             
+                                                          <td th:text="${temp.Reservation_Date}" />             
+                                                          <td th:text="${temp.Patient}" /> 
+                                                          <td th:text="${temp.cancelation_reason}" />                                                                                                 
+                                           </tr>
+                             </tbody>                         
+              </table> 
+              
+
+
+    
+</div>
+</body>
+</html>
